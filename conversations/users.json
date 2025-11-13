@@ -1,0 +1,23 @@
+{
+  "test_user_123": {
+    "phoneNumber": "test_user_123",
+    "firstMessage": "2025-11-13T08:47:20.932Z",
+    "lastMessage": "2025-11-13T09:18:08.596Z",
+    "messageCount": 4,
+    "documentCount": 0,
+    "pdfCount": 0,
+    "isOptedOut": false,
+    "preferences": {
+      "documentType": "cv",
+      "language": "en",
+      "notifications": true
+    },
+    "conversationHistory": [],
+    "lastInteractionType": "text",
+    "sessionState": {
+      "awaitingDocument": false,
+      "documentType": "cv",
+      "lastQuickReply": null
+    }
+  }
+}
