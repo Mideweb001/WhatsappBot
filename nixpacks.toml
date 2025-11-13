@@ -1,0 +1,15 @@
+# Railway deployment configuration for WhatsApp Bot with Puppeteer support
+[phases.setup]
+nixPkgs = ['nodejs_18', 'python3']
+
+[phases.install]
+cmds = [
+    'npm ci --production',
+    'npx puppeteer browsers install chrome'
+]
+
+[phases.build]
+cmds = ['echo "Build phase complete"']
+
+[start]
+cmd = 'npm start'
