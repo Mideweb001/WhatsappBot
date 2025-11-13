@@ -1,0 +1,14 @@
+# Simplified Railway Configuration (No Puppeteer)
+# Use this if PDF generation is causing deployment issues
+
+[phases.setup]
+nixPkgs = ['nodejs_18']
+
+[phases.install]
+cmds = ['npm ci --production --omit=optional']
+
+[phases.build]
+cmds = ['echo "Build phase complete"']
+
+[start]
+cmd = 'npm start'

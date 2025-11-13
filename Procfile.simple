@@ -1,0 +1,2 @@
+# Simplified Railway Deployment - Use basic server
+web: node server-simple.js
