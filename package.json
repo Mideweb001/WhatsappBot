@@ -4,7 +4,7 @@
   "description": "WhatsApp Business API integration with webhook handling and Meta Cloud API",
   "main": "src/server.js",
   "scripts": {
-    "start": "node server-minimal.js",
+    "start": "node server-debug.js",
     "dev": "nodemon src/server.js",
     "test": "jest",
     "verify-webhook": "node scripts/verify-webhook.js",
