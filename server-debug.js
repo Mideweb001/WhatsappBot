@@ -52,6 +52,25 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  if (pathname === '/privacy-policy' || pathname === '/privacy') {
+    const fs = require('fs');
+    const path = require('path');
+    try {
+      const privacyContent = fs.readFileSync(path.join(__dirname, 'privacy-policy.html'), 'utf8');
+      res.writeHead(200, { 'Content-Type': 'text/html' });
+      res.end(privacyContent);
+    } catch (error) {
+      res.writeHead(200, { 'Content-Type': 'text/html' });
+      res.end(`
+        <h1>Privacy Policy</h1>
+        <p>This WhatsApp Business API service respects your privacy and handles your data securely.</p>
+        <p>Contact us for privacy concerns or data deletion requests.</p>
+        <p>Last updated: November 14, 2025</p>
+      `);
+    }
+    return;
+  }
+
   if (pathname === '/' || pathname === '') {
     res.writeHead(200);
     res.end(JSON.stringify({
